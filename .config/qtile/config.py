@@ -555,4 +555,10 @@ auto_fullscreen = True
 
 focus_on_window_activation = "focus" # or smart
 
+@hook.subscribe.startup_once
+def start_once():
+    home = os.path.expanduser('~')
+    subprocess.call([home + '/.config/qtile/autostart.sh'])
+
+
 wmname = "LG3D"
