@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV V VI 
+bspc monitor -d I II III IV V VI VII
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -16,7 +16,9 @@ bspc rule -a firefox desktop=focused:^2
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-bspc rule -a VirtualBoxVM desktop=focused:^7 follow=on
+bspc rule -a VirtualBoxVM desktop=focused:^6 follow=on
+bspc rule -a Steam desktop=focused:^7 
+bscp rule -a jetbrains-rider state=floating
 
 
 
